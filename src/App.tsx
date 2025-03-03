@@ -361,37 +361,42 @@ function App() {
           </div>
 
           <div className="mt-10">
-            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-              {/* Annual Plan */}
+            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+              {/* Plan Básico */}
               <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-indigo-50 hover:border-indigo-100 transition-all">
-                <h3 className="text-2xl font-bold text-gray-900 text-center">Plan Anual</h3>
+                <h3 className="text-2xl font-bold text-gray-900 text-center">Plan Básico</h3>
                 <p className="mt-4 text-5xl font-extrabold text-gray-900 text-center">
                   $50
-                  <span className="text-xl font-normal text-gray-500">/año</span>
                 </p>
                 <ul className="mt-8 space-y-4">
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Acceso completo a todas las funciones</span>
+                    <span className="ml-3 text-base text-gray-500">Acceso por seis meses</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Actualizaciones regulares</span>
+                    <span className="ml-3 text-base text-gray-500">Comparte la aplicación con un máximo de cinco usuarios</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Soporte técnico por correo</span>
+                    <span className="ml-3 text-base text-gray-500">Acceso a todas las funciones</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Soporte por correo electrónico</span>
                   </li>
                 </ul>
                 <div className="mt-8">
                   <button
-                    onClick={() => handleSubscribe('annual')}
+                    onClick={() => handleSubscribe('basic')}
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     Comenzar Ahora
@@ -399,48 +404,107 @@ function App() {
                 </div>
               </div>
 
-              {/* Lifetime Plan */}
+              {/* Plan Premium */}
               <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-indigo-200 hover:border-indigo-300 transition-all">
                 <div className="absolute -top-4 right-4 px-4 py-1 bg-indigo-100 rounded-full">
                   <p className="text-sm font-medium text-indigo-600">Más popular</p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 text-center">Plan de por Vida</h3>
+                <h3 className="text-2xl font-bold text-gray-900 text-center">Plan Premium</h3>
                 <p className="mt-4 text-5xl font-extrabold text-gray-900 text-center">
-                  $99
-                  <span className="text-xl font-normal text-gray-500">/único pago</span>
+                  $75
                 </p>
                 <ul className="mt-8 space-y-4">
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Acceso de por vida a todas las funciones</span>
+                    <span className="ml-3 text-base text-gray-500">Acceso por seis meses</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Actualizaciones gratuitas de por vida</span>
+                    <span className="ml-3 text-base text-gray-500">Usuario único</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Soporte técnico prioritario</span>
+                    <span className="ml-3 text-base text-gray-500">Soporte por correo electrónico</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="ml-3 text-base text-gray-500">Sin pagos recurrentes</span>
+                    <span className="ml-3 text-base text-gray-500">Acceso a todas las funciones</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Mejoras periódicas</span>
                   </li>
                 </ul>
                 <div className="mt-8">
                   <button
-                    onClick={() => handleSubscribe('lifetime')}
+                    onClick={() => handleSubscribe('premium')}
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
-                    Obtener Acceso Vitalicio
+                    Obtener Premium
+                  </button>
+                </div>
+              </div>
+
+              {/* Plan Profesional */}
+              <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-indigo-100 hover:border-indigo-200 transition-all">
+                <h3 className="text-2xl font-bold text-gray-900 text-center">Plan Profesional</h3>
+                <p className="mt-4 text-5xl font-extrabold text-gray-900 text-center">
+                  $125
+                </p>
+                <ul className="mt-8 space-y-4">
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Acceso por seis meses</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Usuario único</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Adaptación de funciones a requerimiento</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Soporte prioritario</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Acceso a todas las funciones</span>
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-500">Mejoras periódicas</span>
+                  </li>
+                </ul>
+                <div className="mt-8">
+                  <button
+                    onClick={() => handleSubscribe('professional')}
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  >
+                    Ordenar Ahora
                   </button>
                 </div>
               </div>

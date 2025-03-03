@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 interface SubscriptionFormProps {
   isOpen: boolean;
   onClose: () => void;
-  selectedPlan: 'annual' | 'lifetime';
+  selectedPlan: 'annual' | 'lifetime' | 'professional';
 }
 
 const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ isOpen, onClose, selectedPlan }) => {
@@ -29,12 +29,25 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ isOpen, onClose, se
 
   if (!isOpen) return null;
 
+  const getPlanTitle = () => {
+    switch(selectedPlan) {
+      case 'annual':
+        return 'Plan Anual';
+      case 'lifetime':
+        return 'Plan de por Vida';
+      case 'professional':
+        return 'Plan Profesional';
+      default:
+        return 'Suscripción';
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
       <div className="relative top-20 mx-auto p-5 border w-[800px] shadow-lg rounded-md bg-white">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-medium text-gray-900">
-            {selectedPlan === 'annual' ? 'Plan Anual' : 'Plan de por Vida'} - Suscripción
+            {getPlanTitle()} - Suscripción
           </h3>
           <button
             onClick={onClose}
