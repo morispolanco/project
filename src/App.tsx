@@ -406,7 +406,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 text-center">Plan de por Vida</h3>
                 <p className="mt-4 text-5xl font-extrabold text-gray-900 text-center">
-                  $499
+                  $99
                   <span className="text-xl font-normal text-gray-500">/único pago</span>
                 </p>
                 <ul className="mt-8 space-y-4">
