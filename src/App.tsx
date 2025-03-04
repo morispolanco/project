@@ -406,9 +406,6 @@ function App() {
 
               {/* Plan Premium */}
               <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-indigo-200 hover:border-indigo-300 transition-all">
-                <div className="absolute -top-4 right-4 px-4 py-1 bg-indigo-100 rounded-full">
-                  <p className="text-sm font-medium text-indigo-600">Más popular</p>
-                </div>
                 <h3 className="text-2xl font-bold text-gray-900 text-center">Plan Premium</h3>
                 <p className="mt-4 text-5xl font-extrabold text-gray-900 text-center">
                   $75
